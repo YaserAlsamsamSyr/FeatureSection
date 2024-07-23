@@ -1,0 +1,83 @@
+/*
+class==>>main-div + header-div + list-div + item-1 + item-2 +item-3 + item-4 + item-5 + item-6
+*/
+
+section{
+    margin-top:50px;
+    background-size: contain;
+    position:relative;
+    display:grid;
+    grid-template-rows:40% 80%;
+    grid-template-columns:100%;
+    grid-template-areas:
+    "head"
+    "body";
+    justify-content: center;
+    align-content: center;
+}
+.header-div{
+    margin-top:30px;
+    grid-area:head;
+    text-align:center;
+    vertical-align: bottom;
+}
+.list-div{
+    grid-area:body;
+    display:grid;
+    grid-template-rows:repeat(2,50%);
+    grid-template-columns:repeat(3,30.3%);
+    justify-content: center;
+    grid-template-areas:
+    "item1 item2 item3"
+    "item4 item5 item6";
+}
+h1,h3{
+    font-weight: bold;
+}
+p,h5{
+    color:gray;
+}
+.item-1,.item-2,.item-3,.item-4,.item-5,.item-6{
+    text-align:center;
+    background-color: #f1f1f1;
+    margin:15px;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+.item-1:hover,.item-2:hover,.item-3:hover,.item-4:hover,.item-5:hover,.item-6:hover{
+    background-color: mediumslateblue;
+    margin-top:-15px;
+}
+.item-1:hover h3,.item-2:hover h3,.item-3:hover h3,.item-4:hover h3,.item-5:hover h3,.item-6:hover h3,
+.item-1:hover a,.item-2:hover a,.item-3:hover a,.item-4:hover a,.item-5:hover a,.item-6:hover a{
+    color: rgb(255, 255, 255);
+}
+.item-1:hover h5,.item-2:hover h5,.item-3:hover h5,.item-4:hover h5,.item-5:hover h5,.item-6:hover h5{
+    color:lightblue;
+}
+
+.item-1{
+    grid-area:item1;
+}
+.item-2{
+    grid-area:item2;
+}
+.item-3{
+    grid-area:item3;
+}
+.item-4{
+    grid-area:item4;
+}
+.item-5{
+    grid-area:item5;
+}
+.item-6{
+    grid-area:item6;
+}
+img{
+    margin-top:-30px;
+   
+    position:relative;
+    width:70px;
+    height:60px;
+}
